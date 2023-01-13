@@ -1,0 +1,10 @@
+{
+    "name":"Guard",
+    "react":7,
+    "deflect":10,
+    "soak":3,
+    "hp":12,
+    "attack_name":"Spear",
+    "attack_target":8,
+    "attack_damage":4
+}

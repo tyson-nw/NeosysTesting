@@ -1,0 +1,10 @@
+{
+    "name":"Bandit",
+    "react":7,
+    "deflect":8,
+    "soak":3,
+    "hp":5,
+    "attack_name":"Shortsword",
+    "attack_target":9,
+    "attack_damage":3
+}

@@ -1,0 +1,10 @@
+{
+    "name":"Mummy",
+    "react":5,
+    "deflect":6,
+    "soak":4,
+    "hp":18,
+    "attack_name":"Rotting blow",
+    "attack_target":11,
+    "attack_damage":12
+}

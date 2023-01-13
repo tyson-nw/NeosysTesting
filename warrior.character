@@ -1,0 +1,13 @@
+{
+    "name":"Warrior",
+    "react":3,
+    "deflect":5,
+    "soak":3,
+    "hp":11,
+    "attack_name":"Greatsword",
+    "attack_bonus":5,
+    "attack_damage":{
+        "die":10,
+        "bonus":3
+    }
+}

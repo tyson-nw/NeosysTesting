@@ -1,0 +1,10 @@
+{
+    "name":"Gnoll",
+    "react":7,
+    "deflect":9,
+    "soak":2,
+    "hp":15,
+    "attack_name":"Spear",
+    "attack_target":10,
+    "attack_damage":5
+}
