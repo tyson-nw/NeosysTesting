@@ -52,6 +52,12 @@ $character_wincount = [];
 $monster_wins = 0;
 $monster_wincount = [];
 
+$character_hits = 0;
+$character_rolls = 0;
+
+$monster_hits = 0;
+$monster_rolls = 0;
+
 for($n=0; $n < $_GET['rounds']; $n++){
     //roll for initiative   
     if ($character->initiative() > $monster->react){
@@ -70,6 +76,11 @@ for($n=0; $n < $_GET['rounds']; $n++){
             //Console::CharacterAttack($result);
             //set next combatant
             $current = $monster;
+            
+            $character_rolls ++;
+            if($result['hit']){
+                $character_hits ++;
+            }
         }else{
             //echo "<h3>Character Attacks</h3>";
             //roll character Deflect vs monster attack
@@ -77,6 +88,11 @@ for($n=0; $n < $_GET['rounds']; $n++){
             //Console::MonsterAttack($result);
             //set next combatant
             $current = $character;
+            
+            $monster_rolls ++;
+            if($result['hit']){
+                $monster_hits ++;
+            }
         }
         $rounds++;
         //Console::Status($character, $monster);
@@ -111,7 +127,7 @@ ksort($character_wincount);
 ksort($monster_wincount);
 
 echo "<h3>". $character->name. " wins $character_wins vs. ".$monster->name." wins $monster_wins</h3>";
-
+echo "<h4>". $character->name. " hits ". round($character_hits/$character_rolls, 4)*100 ."% vs. ".$monster->name." hits " . round($monster_hits/$monster_rolls,4) *100 ."%</h4>";
 echo "<table>\n";
 echo "  <tr>\n";
 echo "      <th>".$character->name. " wins $character_wins.</th>\n";
